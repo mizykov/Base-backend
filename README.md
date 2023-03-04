@@ -4,37 +4,49 @@
 Welcome to the club, buddy!
 
 
+## Table Of Content
+
+- [TODO](#todo)
+- [Prerequirements for Ubuntu 22.04](#prerequirements-for-ubuntu-2204)
+- [How to use](#how-to-use)
+
+---
+
 ## TODO
 
-    + i) Installation on macos
-    + ii) Fix the error of pulling local docker image
+    1) Installation on macos
+    2) Fix the error of pulling local docker image
 
+---
 
 ## Prerequirements for Ubuntu 22.04
 
 ### Install kubernetes k3s
 
-    + i) ```curl -sfL https://get.k3s.io | sh -```
-    + ii) Make this for execute commands without sudo:
+- Load repo and execute bash script
 
-        ```sudo chmod ugo+r /etc/rancher/k3s/k3s.yaml```
+    ```curl -sfL https://get.k3s.io | sh -```
+   
+- Make this for execute commands without sudo:
 
-    + iii) Next, you need to export KUBECONFIG to a variable environment 
-    by executing the following command: 
+    ```sudo chmod ugo+r /etc/rancher/k3s/k3s.yaml```
 
-        ```export KUBECONFIG=/etc/rancher/k3s/k3s.yaml```
+- Next, you need to export KUBECONFIG to a variable environment by executing the following command: 
+
+    ```export KUBECONFIG=/etc/rancher/k3s/k3s.yaml```
 
 ### Install kubernetes k3s
 
-    + i) ```curl https://baltocdn.com/helm/signing.asc | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null```
-
-    + ii) ```sudo apt-get install apt-transport-https --yes```
-
-    + iii) ```echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/helm.gpg] https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list```
-
-    + iv) ```sudo apt-get update```
-
-    + v) ```sudo apt-get install helm```
+-
+    ```curl https://baltocdn.com/helm/signing.asc | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null```
+-
+    ```sudo apt-get install apt-transport-https --yes```
+-
+    ```echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/helm.gpg] https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list```
+-
+    ```sudo apt-get update```
+-
+    ```sudo apt-get install helm```
 
 ### Install docker and docker-engine?
 
@@ -65,9 +77,10 @@ Welcome to the club, buddy!
 
     ```apt-cache madison docker-ce```
 
+---
 
 ## How to use
 
 You should install helm chart from root directory
-
-'''helm install <ANY_NAME_OF_YOUR_CHART> ./edu_helper/helm
+-
+    helm install <ANY_NAME_OF_YOUR_CHART> ./edu_helper/helm
