@@ -16,6 +16,7 @@ Welcome to the club, buddy!
 
     1) Installation on macos
     2) Fix the error of pulling local docker image
+    3) Add nginx for available traffic + identify domain main
 
 ---
 
@@ -35,7 +36,7 @@ Welcome to the club, buddy!
 
     ```export KUBECONFIG=/etc/rancher/k3s/k3s.yaml```
 
-### Install kubernetes k3s
+### Install helm
 
 -
     ```curl https://baltocdn.com/helm/signing.asc | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null```
@@ -48,7 +49,7 @@ Welcome to the club, buddy!
 -
     ```sudo apt-get install helm```
 
-### Install docker and docker-engine?
+### Install docker and docker-engine
 
 1. Update the apt package index and install packages to allow apt to use a repository over HTTPS:
 
