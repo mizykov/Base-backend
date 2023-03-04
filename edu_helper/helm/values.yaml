@@ -1,0 +1,5 @@
+global:
+  repoPath: ""
+
+fastapi_server:
+  containerImage: edu_helper/fastapi_server:1.0
