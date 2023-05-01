@@ -2,4 +2,4 @@ global:
   repoPath: ""
 
 fastapi_server:
-  containerImage: edu_helper/fastapi_server:1.0
+  containerImage: localhost:5000/fastapi_server:1.0

@@ -84,4 +84,4 @@ Welcome to the club, buddy!
 
 You should install helm chart from root directory
 -
-    helm install <ANY_NAME_OF_YOUR_CHART> ./edu_helper/helm
+    helm install <ANY_NAME_OF_YOUR_CHART> ./edu_helper/helm -n <NAMESPACE>
